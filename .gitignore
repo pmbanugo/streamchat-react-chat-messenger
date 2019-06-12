@@ -24,3 +24,4 @@ yarn-error.log*
 
 /server/config.js
 /src/auth/config.js
+/src/chat/config.js
