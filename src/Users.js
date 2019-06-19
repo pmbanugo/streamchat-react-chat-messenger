@@ -24,11 +24,11 @@ export default class Users extends Component {
     if (channels.length > 0) {
       alert("chat with this user is already in your conversation list");
     } else {
-      const conversation = this.props.chatClient.channel("messaging", userId, {
+      const channel = this.props.chatClient.channel("messaging", userId, {
         name: `Chat between ${partnerName} & ${userName}`,
         members: [userId, partnerId]
       });
-      await conversation.create();
+      await channel.create();
       this.props.switchPage("conversations");
     }
   };

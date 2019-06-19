@@ -1,4 +1,4 @@
-import { config } from "./config";
+import config from "./config";
 import * as Auth0 from "auth0-js";
 
 class Auth {
@@ -13,9 +13,6 @@ class Auth {
 
   authFlag = "isLoggedIn";
   userProfileFlag = "userProfile";
-  authStatus = this.isAuthenticated
-    ? "init_with_auth_flag"
-    : "init_no_auth_flag";
 
   localLogin(authResult) {
     localStorage.setItem(this.authFlag, true);
@@ -24,12 +21,6 @@ class Auth {
       JSON.stringify(authResult.idTokenPayload)
     );
     this.loginCallback(authResult.idTokenPayload);
-  }
-
-  localLogout() {
-    localStorage.removeItem(this.authFlag);
-    localStorage.removeItem(this.userProfileFlag);
-    this.logoutCallback();
   }
 
   login() {
@@ -47,6 +38,12 @@ class Auth {
 
   getUserProfile() {
     return JSON.parse(localStorage.getItem(this.userProfileFlag));
+  }
+
+  localLogout() {
+    localStorage.removeItem(this.authFlag);
+    localStorage.removeItem(this.userProfileFlag);
+    this.logoutCallback();
   }
 
   logout() {

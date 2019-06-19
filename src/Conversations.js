@@ -1,7 +1,14 @@
 import React from "react";
-import { Chat, Channel, ChannelList, Window } from "stream-chat-react";
-import { ChannelHeader, MessageList } from "stream-chat-react";
-import { MessageInput, Thread } from "stream-chat-react";
+import {
+  Chat,
+  Channel,
+  ChannelList,
+  Window,
+  ChannelHeader,
+  MessageList,
+  MessageInput,
+  Thread
+} from "stream-chat-react";
 
 import "stream-chat-react/dist/css/index.css";
 
