@@ -8,12 +8,12 @@
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-jwt": "^5.3.1",
-    "jwks-rsa": "^1.5.1",
+    "express-jwt": "^8.3.0",
+    "jwks-rsa": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "stream-chat-react": "^0.6.6"
+    "stream-chat-react": "^10.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
